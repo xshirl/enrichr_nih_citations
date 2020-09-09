@@ -21,16 +21,14 @@ for i in total:
     else:
         frequency[i] = 1
 
-# names = []
-# for key, value in frequency.items():
-#     names.append(key)
-# print(names)
+
 print(frequency)
-        
+
 f = open("enrichr23586463.json", "w")
 f.write(json.dumps(frequency))
 f.close()
 
+# sorts by value
 sorted_d = sorted(frequency.items(), key=operator.itemgetter(1))
 keys = []
 values = []
